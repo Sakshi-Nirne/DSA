@@ -1,0 +1,57 @@
+class Solution {
+        public boolean validPalindrome(String s) 
+        {
+        int s1=0;
+        int s2=s.length()-1;
+       
+        while(s1<s2)
+        {
+            if(s.charAt(s1)==s.charAt(s2))
+            {
+                s1++;
+                s2--;
+            }
+            else
+            {
+                return isPalindrome(s, s1+1, s2) || isPalindrome(s, s1, s2-1);
+            }
+        }
+        return true;
+    }
+
+    public boolean isPalindrome(String s , int s1, int s2)
+    {
+        while(s1<s2)
+        {
+            if(s.charAt(s1)==s.charAt(s2))
+            {
+                s1++;
+                s2--;
+            }
+            else
+            {
+                return false;
+            }
+          
+        }
+          return true;
+    }
+}
+
+
+
+Example 1:
+
+Input: s = "aba"
+Output: true
+
+Example 2:
+
+Input: s = "abca"
+Output: true
+Explanation: You could delete the character 'c'.
+
+Example 3:
+
+Input: s = "abc"
+Output: false
