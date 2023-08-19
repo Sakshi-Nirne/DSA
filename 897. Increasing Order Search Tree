@@ -1,0 +1,26 @@
+class Solution {
+    ArrayList<TreeNode> arr=new ArrayList<>();
+    public TreeNode increasingBST(TreeNode root)
+    {
+         if(root==null) return null;
+        inorder(root);
+        for(int i=0;i<arr.size()-1;i++)
+        {
+            arr.get(i).right=arr.get(i+1);
+            arr.get(i).left=null;
+        }
+        arr.get(arr.size()-1).left=null;
+        arr.get(arr.size()-1).right=null;
+        return arr.get(0);
+    }
+        void inorder(TreeNode node)
+        {
+        if(node==null) return;
+        inorder(node.left);
+        arr.add(node);
+        inorder(node.right);
+        }
+}
+
+Input: root = [5,3,6,2,4,null,8,1,null,null,null,7,9]
+Output: [1,null,2,null,3,null,4,null,5,null,6,null,7,null,8,null,9]
