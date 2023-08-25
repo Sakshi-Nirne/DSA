@@ -1,0 +1,16 @@
+class Solution
+{
+    public int NthRoot(int n, int m)
+    {
+        int i=1;
+        while(true){
+            if((int)Math.pow(i,n)>m){
+                return -1;
+            }
+            if((int)Math.pow(i,n)==m){
+                return i;
+            }
+            i++;
+        }
+    }
+}
