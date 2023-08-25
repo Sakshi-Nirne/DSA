@@ -1,0 +1,25 @@
+class Solution
+{
+    //Function to return list containing first n fibonacci numbers.
+    public static long[] printFibb(int n) 
+    {
+        //Your code here
+        long a[] = new long[n];
+        if(n==1)
+         return new long[]{1};
+        else if(n==2)
+         return new long[]{1,1};
+        else
+        {
+            a[0]=1;
+            a[1]=1;
+            int i=2;
+            while(i<n)
+            {
+                a[i]=a[i-1]+a[i-2];
+                i++;
+            }
+            return a;
+        }
+    }
+}
