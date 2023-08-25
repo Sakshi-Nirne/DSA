@@ -1,0 +1,12 @@
+class Solution:
+    def insert(self, alist, index, n):
+        #code here
+        alist = []
+        for i in range(n):
+            val = int(input())
+            alist.append(val)
+        return alist
+    #Function to sort the list using insertion sort algorithm.    
+    def insertionSort(self, alist, n):
+        #code here
+        return alist.sort()
