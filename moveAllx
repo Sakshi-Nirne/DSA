@@ -1,0 +1,31 @@
+class MoveAllX {
+    public static void moveAll(String str, int idx, int count, String newstr)
+    {
+        if(str.length()==idx)
+        {
+            for(int i=0;i<count;i++)
+            {
+                newstr+= 'x';
+            }
+            System.out.println(newstr);
+            return;
+        }
+        
+        
+        char curr=str.charAt(idx);
+        if(curr=='x')
+        {
+            count++;
+            moveAll(str, idx+1, count, newstr);
+        }
+        else
+        {
+            newstr+=curr;
+            moveAll(str,idx+1,count,newstr);
+        }
+    }
+    public static void main(String[] args) {
+        String str="abxcdxxe";
+        moveAll(str,0,0,"");
+    }
+}
