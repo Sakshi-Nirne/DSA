@@ -1,0 +1,24 @@
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int cp,sp;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter cost price");
+        cp=sc.nextInt();
+        System.out.println("Enter selling price");
+        sp=sc.nextInt();
+        
+        if(cp<sp)
+        {
+            System.out.println(sp-cp);
+            System.out.println("Profit");
+        }
+              
+        else
+        {
+            System.out.println(cp-sp);
+            System.out.println("Loss");
+        }
+    }
+}
