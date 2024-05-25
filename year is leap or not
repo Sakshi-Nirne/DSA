@@ -1,0 +1,36 @@
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int q;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter year");
+        q=sc.nextInt();
+        if(q%4==0)
+        {
+            if(q%100==0)
+            {
+                if(q%400==0)
+                {
+                    System.out.println(q +" is leap year");
+                }
+               else
+               {
+                   System.out.println(q +" is not leap year");
+               }
+            }
+           else
+           {
+               System.out.println(q +" is leap year");
+           }
+        }
+        else
+        {
+            System.out.println(q+" not leap year");
+        }
+    }
+}
+
+
+
+//4  100 400
