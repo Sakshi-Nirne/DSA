@@ -1,0 +1,20 @@
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int q;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter value");
+        q=sc.nextInt();
+        if(q<0)
+        {
+            q=q*(-1);
+            System.out.println(q);
+        }
+              
+        else
+        {
+            System.out.println(q);
+        }
+    }
+}
